@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALLORYS — L'estimation immobilière propulsée par l'IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    .hover-lift { transition: transform 200ms ease, box-shadow 200ms ease; }
+    .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-900 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-gray-100 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="text-2xl font-bold tracking-tight">VALLORYS</div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Fonctionnalités</a>
+        <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Comment ça marche</a>
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Tarifs</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Témoignages</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Connexion</a>
+        <a href="#cta" class="px-5 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">Demander une démo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-rose-50 rounded-full mb-8">
+        <span class="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></span>
+        <span class="text-sm font-medium text-rose-700">Nouveau : Coach Objections IA disponible</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
+        L'estimation immobilière
+        <span class="bg-gradient-to-r from-rose-500 to-amber-500 bg-clip-text text-transparent">propulsée par l'IA</span>
+      </h1>
+      <p class="mt-6 text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        Obtenez des estimations précises en quelques secondes. VALLORYS s'intègre à votre CRM et transforme chaque rendez-vous en mandat signé.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#cta" class="px-8 py-4 bg-gray-900 text-white rounded-xl font-medium text-lg hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/10">
+          Demander une démo
+        </a>
+        <a href="#how-it-works" class="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-xl font-medium text-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
+          <svg class="w-5 h-5 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Voir comment ça marche
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-12 border-y border-gray-100 bg-gray-50/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">96.2%</p>
+          <p class="text-sm text-gray-500 mt-1">Précision moyenne</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">+12%</p>
+          <p class="text-sm text-gray-500 mt-1">De mandats signés</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">127</p>
+          <p class="text-sm text-gray-500 mt-1">Agences partenaires</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">45 000+</p>
+          <p class="text-sm text-gray-500 mt-1">Estimations réalisées</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-rose-50 text-rose-700 rounded-full text-sm font-medium">Fonctionnalités</span>
+        <h2 class="text-4xl font-bold tracking-tight mt-4">Tout ce qu'il faut pour signer plus de mandats</h2>
+        <p class="text-gray-500 mt-4 max-w-xl mx-auto">Quatre outils IA qui transforment votre quotidien d'agent immobilier.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-lift">
+          <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Estimation IA instantanée</h3>
+          <p class="text-gray-500 leading-relaxed">Obtenez un prix juste en 30 secondes grâce à notre algorithme analysant 50+ critères : localisation, DPE, étage, luminosité, état du marché local...</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-lift">
+          <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Pack Terrain intelligent</h3>
+          <p class="text-gray-500 leading-relaxed">Générez automatiquement un dossier terrain complet : comparables récents, tendances du quartier, données démographiques, projets urbains à proximité.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-lift">
+          <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Coach Objections vendeur</h3>
+          <p class="text-gray-500 leading-relaxed">L'IA anticipe les objections de vos vendeurs et vous prépare des réponses personnalisées. « Votre voisin a vendu plus cher » ? On a la réponse.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-lift">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Analytics & Performance</h3>
+          <p class="text-gray-500 leading-relaxed">Suivez vos KPIs en temps réel : taux de conversion, précision des estimations, nombre de mandats, performance par secteur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="py-24 px-6 bg-gray-50/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm font-medium">Simple</span>
+        <h2 class="text-4xl font-bold tracking-tight mt-4">Opérationnel en 5 minutes</h2>
+        <p class="text-gray-500 mt-4 max-w-xl mx-auto">Trois étapes pour transformer votre façon de travailler.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold bg-gradient-to-r from-rose-500 to-amber-500 bg-clip-text text-transparent">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Connectez votre CRM</h3>
+          <p class="text-gray-500 leading-relaxed">Installation en 5 minutes. Compatible avec les principaux CRM immobiliers du marché.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold bg-gradient-to-r from-rose-500 to-amber-500 bg-clip-text text-transparent">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Lancez une estimation</h3>
+          <p class="text-gray-500 leading-relaxed">Entrez l'adresse et les caractéristiques du bien. L'IA analyse instantanément le marché local.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold bg-gradient-to-r from-rose-500 to-amber-500 bg-clip-text text-transparent">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Signez le mandat</h3>
+          <p class="text-gray-500 leading-relaxed">Présentez un rapport professionnel qui inspire confiance et convertit vos prospects en mandats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">Tarifs</span>
+        <h2 class="text-4xl font-bold tracking-tight mt-4">Un plan pour chaque agence</h2>
+        <p class="text-gray-500 mt-4 max-w-xl mx-auto">Commencez gratuitement, évoluez selon vos besoins.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Starter -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-lift">
+          <h3 class="text-lg font-bold text-gray-900">Starter</h3>
+          <p class="text-gray-500 text-sm mt-1">Pour démarrer en douceur</p>
+          <div class="mt-6 mb-8">
+            <span class="text-4xl font-bold text-gray-900">49€</span>
+            <span class="text-gray-500">/mois par utilisateur</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              50 estimations/mois
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Pack terrain basique
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Support email
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              1 CRM connecté
+            </li>
+          </ul>
+          <a href="#cta" class="block w-full text-center px-6 py-3 bg-white text-gray-900 border border-gray-200 rounded-xl font-medium hover:bg-gray-50 transition-colors">
+            Commencer
+          </a>
+        </div>
+        <!-- Pro -->
+        <div class="bg-gray-900 rounded-2xl p-8 shadow-xl relative hover-lift">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-rose-500 to-amber-500 text-white text-sm font-medium rounded-full">
+            Populaire
+          </span>
+          <h3 class="text-lg font-bold text-white">Pro</h3>
+          <p class="text-gray-400 text-sm mt-1">Pour les agents ambitieux</p>
+          <div class="mt-6 mb-8">
+            <span class="text-4xl font-bold text-white">99€</span>
+            <span class="text-gray-400">/mois par utilisateur</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Estimations illimitées
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Pack terrain complet
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Coach objections IA
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Analytics avancés
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              3 CRM connectés
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Support prioritaire
+            </li>
+          </ul>
+          <a href="#cta" class="block w-full text-center px-6 py-3 bg-gradient-to-r from-rose-500 to-amber-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity">
+            Commencer
+          </a>
+        </div>
+        <!-- Enterprise -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-lift">
+          <h3 class="text-lg font-bold text-gray-900">Enterprise</h3>
+          <p class="text-gray-500 text-sm mt-1">Pour les réseaux d'agences</p>
+          <div class="mt-6 mb-8">
+            <span class="text-4xl font-bold text-gray-900">Sur devis</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Tout Pro inclus
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              API dédiée
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Multi-agences
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Formation sur site
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Account manager dédié
+            </li>
+            <li class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              SLA garanti
+            </li>
+          </ul>
+          <a href="#cta" class="block w-full text-center px-6 py-3 bg-white text-gray-900 border border-gray-200 rounded-xl font-medium hover:bg-gray-50 transition-colors">
+            Nous contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-24 px-6 bg-gray-50/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="px-3 py-1 bg-rose-50 text-rose-700 rounded-full text-sm font-medium">Témoignages</span>
+        <h2 class="text-4xl font-bold tracking-tight mt-4">Ils nous font confiance</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">« VALLORYS a transformé notre approche. Nos agents gagnent 20 minutes par estimation et notre taux de conversion a bondi de 15%. »</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
+              <span class="text-sm font-bold text-rose-600">SM</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Sophie Martin</p>
+              <p class="text-gray-500 text-sm">Directrice, Immobilier Conseil Lyon</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">« Le coach objections est bluffant. Il m'a aidé à signer un mandat que j'aurais perdu sans les bons arguments. »</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+              <span class="text-sm font-bold text-amber-600">TD</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Thomas Durand</p>
+              <p class="text-gray-500 text-sm">Agent immobilier, Paris 16e</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">« La précision des estimations impressionne nos clients. Ça change tout lors du rendez-vous. »</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+              <span class="text-sm font-bold text-emerald-600">CP</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Claire Petit</p>
+              <p class="text-gray-500 text-sm">Responsable commercial, Nexity Bordeaux</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="cta" class="py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="bg-gray-900 rounded-3xl p-12 md:p-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-amber-500/10"></div>
+        <div class="relative">
+          <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Prêt à transformer vos estimations ?</h2>
+          <p class="text-gray-400 mt-4 text-lg">Rejoignez les 127 agences qui font confiance à VALLORYS.</p>
+          <a href="#" class="inline-block mt-8 px-8 py-4 bg-gradient-to-r from-rose-500 to-amber-500 text-white rounded-xl font-medium text-lg hover:opacity-90 transition-opacity">
+            Commencer gratuitement
+          </a>
+          <p class="text-gray-500 text-sm mt-4">14 jours d'essai gratuit — Aucune carte requise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-16 px-6 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <div class="text-2xl font-bold tracking-tight text-gray-900 mb-4">VALLORYS</div>
+          <p class="text-gray-500 text-sm leading-relaxed">L'estimation immobilière propulsée par l'intelligence artificielle.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4 text-sm">Produit</h4>
+          <ul class="space-y-3">
+            <li><a href="#features" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Fonctionnalités</a></li>
+            <li><a href="#pricing" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Tarifs</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Intégrations</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">API</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4 text-sm">Ressources</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Documentation</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Blog</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Webinaires</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Cas clients</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4 text-sm">Entreprise</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">À propos</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Carrières</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Contact</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Presse</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4 text-sm">Légal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">CGU</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Confidentialité</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-100 text-center">
+        <p class="text-gray-400 text-sm">&copy; 2026 VALLORYS. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
