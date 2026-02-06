@@ -1,0 +1,87 @@
+# VALLORYS Docker Compose for local development
+version: "3.8"
+
+services:
+  # API Service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+      - DEBUG=true
+      - DATABASE_URL=postgresql+asyncpg://vallorys:vallorys@postgres:5432/vallorys
+      - REDIS_URL=redis://redis:6379/0
+      - LOG_FORMAT=console
+      - LOG_LEVEL=DEBUG
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./src:/app/src:ro
+    networks:
+      - vallorys-network
+    restart: unless-stopped
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=vallorys
+      - POSTGRES_PASSWORD=vallorys
+      - POSTGRES_DB=vallorys
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./infra/init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vallorys -d vallorys"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - vallorys-network
+    restart: unless-stopped
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - vallorys-network
+    restart: unless-stopped
+
+  # Adminer (Database UI)
+  adminer:
+    image: adminer:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - ADMINER_DEFAULT_SERVER=postgres
+    depends_on:
+      - postgres
+    networks:
+      - vallorys-network
+    profiles:
+      - dev
+
+volumes:
+  postgres-data:
+  redis-data:
+
+networks:
+  vallorys-network:
+    driver: bridge
