@@ -1,6 +1,8 @@
 """Seller-related schemas."""
 
-from datetime import date
+from __future__ import annotations
+
+from datetime import date as date_type
 from enum import Enum
 
 from pydantic import BaseModel
@@ -37,7 +39,7 @@ class PreviousEstimate(BaseModel):
     """Previous estimate from another source."""
     source: str
     amount: float
-    date: date | None = None
+    date: date_type | None = None
 
 
 class SellerProfile(BaseModel):

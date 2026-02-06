@@ -5,7 +5,7 @@ from datetime import datetime
 
 import structlog
 
-from vallorys.schemas.property import PropertyProfile, PropertyType
+from vallorys.schemas.property import PropertyProfile, PropertyType, DPERating, ConditionLevel
 from vallorys.schemas.market import MarketContext
 from vallorys.schemas.valuation import (
     ValuationResult,
