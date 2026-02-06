@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALLORYS - Choix du Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .vibe-card { transition: all 0.3s ease; }
+        .vibe-card:hover { transform: translateY(-4px); }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen py-8">
+    <div class="max-w-7xl mx-auto px-4">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">🎨 Choisis ton Design System</h1>
+            <p class="text-gray-600 text-lg">Clique sur le style qui te correspond pour VALLORYS</p>
+        </header>
+
+        <!-- VIBE_1_START -->
+        <section class="vibe-card bg-white rounded-2xl shadow-lg p-8 mb-8 cursor-pointer border-2 border-transparent hover:border-blue-500" onclick="selectVibe(1)">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">VIBE 1</span>
+                <h2 class="text-2xl font-bold text-gray-900">Corporate Premium</h2>
+            </div>
+
+            <!-- Demo Dashboard Vibe 1 -->
+            <div class="bg-slate-50 rounded-xl p-6" style="font-family: 'Inter', sans-serif;">
+                <div class="flex gap-6">
+                    <!-- Sidebar -->
+                    <div class="w-48 bg-slate-900 rounded-xl p-4 text-white">
+                        <div class="text-xl font-bold mb-6 text-blue-400">VALLORYS</div>
+                        <nav class="space-y-2">
+                            <a class="flex items-center gap-2 px-3 py-2 bg-blue-600 rounded-lg text-sm">
+                                <span>📊</span> Dashboard
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-slate-800 rounded-lg text-sm text-slate-300">
+                                <span>🏠</span> Estimations
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-slate-800 rounded-lg text-sm text-slate-300">
+                                <span>💬</span> Coach
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200">
+                                <p class="text-slate-500 text-sm">Estimations ce mois</p>
+                                <p class="text-3xl font-bold text-slate-900">127</p>
+                                <p class="text-green-600 text-sm">+12% vs mois dernier</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200">
+                                <p class="text-slate-500 text-sm">Taux de conversion</p>
+                                <p class="text-3xl font-bold text-slate-900">47%</p>
+                                <p class="text-green-600 text-sm">+3pts</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200">
+                                <p class="text-slate-500 text-sm">Précision moyenne</p>
+                                <p class="text-3xl font-bold text-slate-900">96.2%</p>
+                                <p class="text-blue-600 text-sm">±4.2% MAPE</p>
+                            </div>
+                        </div>
+
+                        <!-- Estimation Card -->
+                        <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-semibold text-slate-900">Appartement 85m² - Lyon 1er</h3>
+                                    <p class="text-slate-500 text-sm">DPE D • 4 pièces • 3ème étage</p>
+                                </div>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Confiance élevée</span>
+                            </div>
+                            <div class="flex items-end gap-8">
+                                <div>
+                                    <p class="text-slate-500 text-sm">Prix recommandé</p>
+                                    <p class="text-3xl font-bold text-blue-600">365 000 €</p>
+                                </div>
+                                <div class="text-sm text-slate-500">
+                                    Fourchette: 339 000 € - 390 000 €
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500 text-center">Style corporate, tons bleu/slate, professionnel et sobre</p>
+        </section>
+        <!-- VIBE_1_END -->
+
+        <!-- VIBE_2_START -->
+        <section class="vibe-card bg-white rounded-2xl shadow-lg p-8 mb-8 cursor-pointer border-2 border-transparent hover:border-emerald-500" onclick="selectVibe(2)">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full font-semibold">VIBE 2</span>
+                <h2 class="text-2xl font-bold text-gray-900">Modern Fresh</h2>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6" style="font-family: 'Space Grotesk', sans-serif;">
+                <div class="flex gap-6">
+                    <!-- Sidebar -->
+                    <div class="w-48 bg-white/80 backdrop-blur rounded-2xl p-4 shadow-lg">
+                        <div class="text-xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">VALLORYS</div>
+                        <nav class="space-y-2">
+                            <a class="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl text-sm text-white shadow-md">
+                                <span>📊</span> Dashboard
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-emerald-100 rounded-xl text-sm text-gray-600">
+                                <span>🏠</span> Estimations
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-emerald-100 rounded-xl text-sm text-gray-600">
+                                <span>💬</span> Coach
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="bg-white/80 backdrop-blur rounded-2xl p-4 shadow-lg">
+                                <p class="text-gray-500 text-sm">Estimations ce mois</p>
+                                <p class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">127</p>
+                                <p class="text-emerald-600 text-sm">↑ +12%</p>
+                            </div>
+                            <div class="bg-white/80 backdrop-blur rounded-2xl p-4 shadow-lg">
+                                <p class="text-gray-500 text-sm">Taux de conversion</p>
+                                <p class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">47%</p>
+                                <p class="text-emerald-600 text-sm">↑ +3pts</p>
+                            </div>
+                            <div class="bg-white/80 backdrop-blur rounded-2xl p-4 shadow-lg">
+                                <p class="text-gray-500 text-sm">Précision moyenne</p>
+                                <p class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">96.2%</p>
+                                <p class="text-teal-600 text-sm">Excellent</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white/80 backdrop-blur rounded-2xl p-4 shadow-lg">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-semibold text-gray-900">Appartement 85m² - Lyon 1er</h3>
+                                    <p class="text-gray-500 text-sm">DPE D • 4 pièces • 3ème étage</p>
+                                </div>
+                                <span class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">84% confiance</span>
+                            </div>
+                            <div class="flex items-end gap-8">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Prix recommandé</p>
+                                    <p class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">365 000 €</p>
+                                </div>
+                                <div class="h-2 flex-1 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full w-3/4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500 text-center">Style moderne, dégradés emerald/teal, glassmorphism, dynamique</p>
+        </section>
+        <!-- VIBE_2_END -->
+
+        <!-- VIBE_3_START -->
+        <section class="vibe-card bg-white rounded-2xl shadow-lg p-8 mb-8 cursor-pointer border-2 border-transparent hover:border-violet-500" onclick="selectVibe(3)">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-violet-100 text-violet-700 px-4 py-2 rounded-full font-semibold">VIBE 3</span>
+                <h2 class="text-2xl font-bold text-gray-900">Dark Luxury</h2>
+            </div>
+
+            <div class="bg-gray-950 rounded-xl p-6" style="font-family: 'Inter', sans-serif;">
+                <div class="flex gap-6">
+                    <!-- Sidebar -->
+                    <div class="w-48 bg-gray-900 rounded-xl p-4 border border-gray-800">
+                        <div class="text-xl font-bold mb-6 text-violet-400">VALLORYS</div>
+                        <nav class="space-y-2">
+                            <a class="flex items-center gap-2 px-3 py-2 bg-violet-600/20 border border-violet-500/30 rounded-lg text-sm text-violet-300">
+                                <span>📊</span> Dashboard
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-gray-800 rounded-lg text-sm text-gray-400">
+                                <span>🏠</span> Estimations
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-gray-800 rounded-lg text-sm text-gray-400">
+                                <span>💬</span> Coach
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                                <p class="text-gray-500 text-sm">Estimations ce mois</p>
+                                <p class="text-3xl font-bold text-white">127</p>
+                                <p class="text-violet-400 text-sm">+12% ↑</p>
+                            </div>
+                            <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                                <p class="text-gray-500 text-sm">Taux de conversion</p>
+                                <p class="text-3xl font-bold text-white">47%</p>
+                                <p class="text-violet-400 text-sm">+3pts ↑</p>
+                            </div>
+                            <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                                <p class="text-gray-500 text-sm">Précision moyenne</p>
+                                <p class="text-3xl font-bold text-white">96.2%</p>
+                                <p class="text-violet-400 text-sm">Top tier</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-semibold text-white">Appartement 85m² - Lyon 1er</h3>
+                                    <p class="text-gray-500 text-sm">DPE D • 4 pièces • 3ème étage</p>
+                                </div>
+                                <span class="bg-violet-600/20 border border-violet-500/30 text-violet-300 px-3 py-1 rounded-full text-sm font-medium">84% confiance</span>
+                            </div>
+                            <div class="flex items-end gap-8">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Prix recommandé</p>
+                                    <p class="text-3xl font-bold text-violet-400">365 000 €</p>
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    339K - 390K €
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500 text-center">Style dark mode premium, accents violet, minimaliste et élégant</p>
+        </section>
+        <!-- VIBE_3_END -->
+
+        <!-- VIBE_4_START -->
+        <section class="vibe-card bg-white rounded-2xl shadow-lg p-8 mb-8 cursor-pointer border-2 border-transparent hover:border-amber-500" onclick="selectVibe(4)">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-amber-100 text-amber-700 px-4 py-2 rounded-full font-semibold">VIBE 4</span>
+                <h2 class="text-2xl font-bold text-gray-900">Warm Elegant</h2>
+            </div>
+
+            <div class="bg-stone-100 rounded-xl p-6" style="font-family: 'Playfair Display', serif;">
+                <div class="flex gap-6">
+                    <!-- Sidebar -->
+                    <div class="w-48 bg-stone-800 rounded-xl p-4">
+                        <div class="text-xl font-bold mb-6 text-amber-400 tracking-wide">VALLORYS</div>
+                        <nav class="space-y-2" style="font-family: 'Inter', sans-serif;">
+                            <a class="flex items-center gap-2 px-3 py-2 bg-amber-600 rounded-lg text-sm text-white">
+                                <span>📊</span> Dashboard
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-stone-700 rounded-lg text-sm text-stone-300">
+                                <span>🏠</span> Estimations
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-stone-700 rounded-lg text-sm text-stone-300">
+                                <span>💬</span> Coach
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="bg-white rounded-xl p-4 shadow-sm border border-stone-200">
+                                <p class="text-stone-500 text-sm" style="font-family: 'Inter', sans-serif;">Estimations ce mois</p>
+                                <p class="text-3xl font-bold text-stone-800">127</p>
+                                <p class="text-amber-600 text-sm" style="font-family: 'Inter', sans-serif;">+12% ce mois</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-sm border border-stone-200">
+                                <p class="text-stone-500 text-sm" style="font-family: 'Inter', sans-serif;">Taux de conversion</p>
+                                <p class="text-3xl font-bold text-stone-800">47%</p>
+                                <p class="text-amber-600 text-sm" style="font-family: 'Inter', sans-serif;">+3 points</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-sm border border-stone-200">
+                                <p class="text-stone-500 text-sm" style="font-family: 'Inter', sans-serif;">Précision moyenne</p>
+                                <p class="text-3xl font-bold text-stone-800">96.2%</p>
+                                <p class="text-amber-600 text-sm" style="font-family: 'Inter', sans-serif;">Excellente</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4 shadow-sm border border-stone-200">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-semibold text-stone-800 text-lg">Appartement 85m² — Lyon 1er</h3>
+                                    <p class="text-stone-500 text-sm" style="font-family: 'Inter', sans-serif;">DPE D • 4 pièces • 3ème étage</p>
+                                </div>
+                                <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium" style="font-family: 'Inter', sans-serif;">Confiance élevée</span>
+                            </div>
+                            <div class="flex items-end gap-8">
+                                <div>
+                                    <p class="text-stone-500 text-sm" style="font-family: 'Inter', sans-serif;">Prix recommandé</p>
+                                    <p class="text-3xl font-bold text-amber-700">365 000 €</p>
+                                </div>
+                                <div class="text-sm text-stone-500" style="font-family: 'Inter', sans-serif;">
+                                    Fourchette: 339 000 € — 390 000 €
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500 text-center">Style chaleureux et élégant, tons stone/amber, typographie serif premium</p>
+        </section>
+        <!-- VIBE_4_END -->
+
+        <!-- VIBE_5_START -->
+        <section class="vibe-card bg-white rounded-2xl shadow-lg p-8 mb-8 cursor-pointer border-2 border-transparent hover:border-cyan-500" onclick="selectVibe(5)">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full font-semibold">VIBE 5</span>
+                <h2 class="text-2xl font-bold text-gray-900">Tech Minimal</h2>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 border-2 border-gray-200" style="font-family: 'Space Grotesk', sans-serif;">
+                <div class="flex gap-6">
+                    <!-- Sidebar -->
+                    <div class="w-48 border-r-2 border-gray-200 pr-4">
+                        <div class="text-xl font-bold mb-6 text-cyan-600">VALLORYS</div>
+                        <nav class="space-y-1">
+                            <a class="flex items-center gap-2 px-3 py-2 bg-cyan-50 border-l-4 border-cyan-500 text-sm text-cyan-700 font-medium">
+                                Dashboard
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-l-4 border-transparent text-sm text-gray-600">
+                                Estimations
+                            </a>
+                            <a class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 border-l-4 border-transparent text-sm text-gray-600">
+                                Coach
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <div class="border-2 border-gray-200 rounded-lg p-4">
+                                <p class="text-gray-400 text-xs uppercase tracking-wider">Estimations</p>
+                                <p class="text-4xl font-bold text-gray-900">127</p>
+                                <p class="text-cyan-600 text-sm font-medium">+12%</p>
+                            </div>
+                            <div class="border-2 border-gray-200 rounded-lg p-4">
+                                <p class="text-gray-400 text-xs uppercase tracking-wider">Conversion</p>
+                                <p class="text-4xl font-bold text-gray-900">47%</p>
+                                <p class="text-cyan-600 text-sm font-medium">+3pts</p>
+                            </div>
+                            <div class="border-2 border-gray-200 rounded-lg p-4">
+                                <p class="text-gray-400 text-xs uppercase tracking-wider">Précision</p>
+                                <p class="text-4xl font-bold text-gray-900">96.2%</p>
+                                <p class="text-cyan-600 text-sm font-medium">MAPE 4.2%</p>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-gray-200 rounded-lg p-4">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-bold text-gray-900">Appartement 85m² — Lyon 1er</h3>
+                                    <p class="text-gray-400 text-sm">DPE:D | 4P | É.3</p>
+                                </div>
+                                <span class="border-2 border-cyan-500 text-cyan-600 px-3 py-1 rounded text-sm font-bold">84%</span>
+                            </div>
+                            <div class="flex items-end justify-between">
+                                <div>
+                                    <p class="text-gray-400 text-xs uppercase tracking-wider">Prix recommandé</p>
+                                    <p class="text-4xl font-bold text-gray-900">365K€</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-gray-400 text-xs">MIN</p>
+                                    <p class="text-lg font-medium text-gray-600">339K</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-gray-400 text-xs">MAX</p>
+                                    <p class="text-lg font-medium text-gray-600">390K</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500 text-center">Style tech minimaliste, bordures nettes, typographie moderne, accents cyan</p>
+        </section>
+        <!-- VIBE_5_END -->
+
+    </div>
+
+    <script>
+        function selectVibe(vibeNumber) {
+            const message = `Tu as choisi la VIBE ${vibeNumber} !
+
+Dis-moi "vibe ${vibeNumber}" et je créerai le design-system.md à partir de ce style.`;
+            alert(message);
+        }
+    </script>
+</body>
+</html>
